@@ -37,7 +37,7 @@ export class HttpDnsManager {
   private httpDnsService: IHttpDnsService | undefined;
   
   // 替换为你自己的阿里云 Account ID
-  private static readonly ALIYUN_ACCOUNT_ID = "105310";
+  private static readonly ALIYUN_ACCOUNT_ID = "";
 
   private constructor() {
   }
