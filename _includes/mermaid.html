@@ -1,10 +1,23 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: 'default',
-      flowchart: { useMaxWidth: true }
+    document.addEventListener("DOMContentLoaded", function () {
+        // 将 Jekyll 生成的 <pre><code class="language-mermaid"> 转换为 <div class="mermaid">
+        document.querySelectorAll('code.language-mermaid').forEach(function (codeElement) {
+            var preElement = codeElement.parentElement;
+            var mermaidDiv = document.createElement('div');
+            mermaidDiv.className = 'mermaid';
+            mermaidDiv.textContent = codeElement.textContent;
+            preElement.replaceWith(mermaidDiv);
+        });
+
+        // 初始化 Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: { useMaxWidth: true }
+        });
+
+        // 手动触发渲染
+        mermaid.run();
     });
-  });
 </script>
