@@ -37,7 +37,7 @@ Protocol Buffers（简称 Protobuf）是 Google 开发的一种高效的数据�
 
 | 特性 | 不使用 packed | 使用 packed=true |
 |------|:-------------:|:----------------:|
-| **编码方式** | 每个元素单独编码，每个值都带 tag+type+value | 所有元素打包成连续字节块，只有一个 tag+length |
+| **编码方式** | 每个元素单独编码，每个值都带 tag+type+value | 所有元素打包成连续字节块，仅需一个 tag+length 头部，后跟所有 value |
 | **Wire Type** | Varint (0) | Length-delimited (2) |
 | **Tag 开销** | 100 × 1 = **100 字节** | 1 字节 |
 | **Length 开销** | 无 | 2 字节 |
