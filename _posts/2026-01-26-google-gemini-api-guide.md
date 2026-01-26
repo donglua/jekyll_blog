@@ -4,6 +4,7 @@ title:  "Google Gemini API 功能说明与测试报告"
 date:   2026-01-26 14:53:00 +0800
 categories: [技术, AI]
 tags: [gemini, google, api, ai, 人工智能]
+published: false
 ---
 
 > Google Gemini API 是 Google 提供的强大多模态人工智能 API，能够处理文本、图像、音频和视频等多种数据类型。本文将深入介绍 Gemini API 的核心功能，并通过实际测试展示其应用场景。
